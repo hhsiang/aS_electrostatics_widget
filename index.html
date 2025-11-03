@@ -20,6 +20,15 @@
       position: relative;
       width: 100%;
     }
+    .overlay-toggle {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
 
     .gif-wrapper img {
       position: absolute;
@@ -42,9 +51,11 @@
 </head>
 <body>
   <div class="widget-container">
-    <label>
-      <input type="checkbox" id="toggleLipids"> Show lipids
-    </label>
+    <div class="overlay-toggle">
+      <label>
+        <input type="checkbox" id="toggleLipids"> Show lipids
+      </label>
+    </div>
 
     <div class="gif-wrapper">
       <img id="gif1" src="synuclein only.gif" alt="Base GIF" />
