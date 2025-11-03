@@ -24,10 +24,12 @@
       position: absolute;
       top: 8px;
       left: 8px;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.85);
       padding: 4px 8px;
       border-radius: 6px;
       font-size: 0.9rem;
+      z-index: 9999; /* ensure always above gifs */
+      pointer-events: auto;
     }
 
     .gif-wrapper img {
@@ -51,10 +53,14 @@
 </head>
 <body>
   <div class="widget-container">
-    <div class="overlay-toggle">
-      <label>
-        <input type="checkbox" id="toggleLipids"> Show lipids
-      </label>
+    <div class="gif-wrapper">
+      <div class="overlay-toggle">
+        <label>
+          <input type="checkbox" id="toggleLipids"> Show lipids
+        </label>
+      </div>
+      <img id="gif1" src="synuclein only.gif" alt="Base GIF" />
+      <img id="gif2" src="synuclein with lipids.gif" alt="Lipid Overlay GIF" />
     </div>
 
     <div class="gif-wrapper">
